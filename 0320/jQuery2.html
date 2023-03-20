@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <!-- <script src="js/jquery-3.6.4.js"></script> -->
     <script>
+        //document.onload(function(){});
+        //$(document).ready(function(){});
         $(function(){
+//            document.getElementById('ex1')
+//                .addEventListener('click',function(){});
             $('#ex1').click(function(){
                 $('*').css('background-color','white');
                 $('[name|=seoul]').css('background-color','pink');
@@ -60,7 +65,7 @@
                 <input name="seoul2" value="seoul2"><br>
                 <input name="pre-seoul2" value="pre-seoul2"><br>
                 <input name="seoul2-sub" value="seoul2-sub"><br>
-                <input name="pre-seoul-sub" value="pre-seoul2-sub"><br>
+                <input name="pre-seoul2-sub" value="pre-seoul2-sub"><br>
                 <input name="tokyo-sub" value="tokyo-sub"><br>
             </td>
             <td>
@@ -79,15 +84,6 @@
 <body>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
 
 
