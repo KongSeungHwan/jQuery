@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <h2>오늘 점심은 뭘 먹었나요?</h2>
+    <div class="bl1">
+        <input type="radio" name="sel" id="kr">
+        <label for="kr">한식</label>
+    </div>
+    <div class="bl1">
+        <input type="radio" name="sel" id="jr">
+        <label for="jr">중식</label>
+    </div>
+    <div class="bl1">
+        <input type="radio" name="sel" id="ir">
+        <label for="ir">일식</label>
+    </div>
+    <div class="bl1">
+        <input type="radio" name="sel" id="yr">
+        <label for="yr">양식</label>
+    </div>
+    <b class="rest1 rest">한식</b>
+    <b class="rest2 rest">중식</b>
+    <b class="rest3 rest">일식</b>
+    <b class="rest4 rest">양식</b>
+    <h2>오늘 점심은 뭘 먹었나요?</h2>
+    <b class="rest1 rest">한식</b>
+    <b class="rest2 rest">중식</b>
+    <b class="rest3 rest">일식</b>
+    <b class="rest4 rest">양식</b>
+<script>
+        $(function(){
+            let count1=0,count2=0,count3=0,count4=0;
+            $('.bl1').css({"display":"block"});
+            $('b.rest').css({"display":"block","font-size":"20px"});
+            $('.bl1 *').css({"display":"inline-block"});
+            let block = $('div').addClass('bl2').css({"background-color":"brown", "width":"13px", "height":"13px"});
+            $("#kr").click(function(){
+                $('b.rest1').append(block.clone()).append(++count1.toString());
+            })
+            $("#ir").click(function(){
+                $('b.rest2').append(block.clone()).append(++count2.toString());
+            })
+            $("#jr").click(function(){
+                $('b.rest3').append(block.clone()).append(++count3.toString());
+            })
+            $("#yr").click(function(){
+                $('b.rest4').append(block.clone()).append(++count4.toString());
+            })
+        });
+    </script>
+</body>
+</html>

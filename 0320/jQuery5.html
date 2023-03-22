@@ -1,53 +1,53 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animate</title>
+    <title>Document</title>
     <style>
-        div{position:absolute;background-color: lightsalmon;
-            left:0px;top:30px;width:60px;height:60px;margin:5px;}
+        div{position:absolute; background-color: lightsalmon;
+            left:0px;top:30px;width:60px;height:60px; margin:5px;
+        }
     </style>
-    <script src="js/jquery-3.6.4.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
     <div class="block"></div>
     <button id="go">GO</button>
     <button id="stop">STOP</button>
     <button id="back">BACK</button>
-<script>
-    $('#go').click(()=>{
-        $('.block').animate({left:"+=100px",opacity:"0.4"},"slow");
-        $('.block').animate({top:"+=100px",opacity:"0.8"},"slow");
-    });
-    $('#stop').click(()=>{
-        $('.block').stop();
-    })
-    $('#back').click(()=>{
-        $('.block').animate({left:'-=100px',opacity:"1"},2000);
-    })
-</script>
-    <br><br><br><br><br><br><br><br>
-    <button id="hide">hide</button>
-    <p id="p1">paragraph</p>
-<script>
-    $('#hide').click(function(){
-        $('#p1').hide('slow',function(){
-            alert('paragraph is hidden');
+    <script>
+        $('#go').click(()=>{
+            $('.block').animate({left:"+=100px",opacity:"0.4"},"slow");
+            $('.block').animate({left:"+=100px",opacity:"0.8"},"slow");
+        });
+        $('#stop').click(()=>{
+            $('.block').stop();
         })
-//        $('#p1').hide(1000);
-//        alert("The paragraph is hidden");
-    });
-</script>
+        $('#back').click(()=>{
+            $('#back').click(()=>{
+                $('.block').animate({left:'-=100px'},2000);
+            })
+        })
+    </script>
+    <button id="hide">hide</button>
+    <p>paragraph</p>
+    <script>
+        $('#hide').click(()=>{
+            /* $('p').hide('slow',()=>{
+                alert('paragraph is hidden');
+            }); */
+            $('p').hide(1000);
+            alert("The paragraph is hidden");
+        })
+    </script>
     <button id="chain">click</button>
     <p id="p2">paragraph</p>
-<script>
-    $('#chain').click(()=>{
-        $('#p2').slideUp(1000)
-            .slideDown(2000).css('color','orange');
-    });
-</script>
-
+    <script>
+        $('#chain').click(()=>{
+        $('#p2').slideUp(1000).sildeDown(2000).css('color','orange');
+    })
+    </script>
 </body>
 </html>
