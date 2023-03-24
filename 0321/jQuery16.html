@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>jquery</title>
+    <script src="../0320/js/jquery-3.6.4.js"></script>
     <style>
-        p{color: blue;}
-        div{color: red;}
+        p{color:blue;}
+        div{color:red;}
     </style>
 </head>
 <body>
@@ -18,16 +18,18 @@
     <br>
     <p>this is a paragraph.</p>
     <p>this is a next paragraph.</p>
-    <script>
-        $('input').select(function(){
-            $('div').text('텍스트가 선택되었습니다.').show().fadeOut(2000);
-        });
-        $('button').on('click',function(){
-            $('input').trigger('select');
-        })
-        $('p').one('click dbclick',function(){
-            $(this).animate({fontSize:"+=20px"});
-        })
-    </script>  
+<script>
+$(function(){
+    $('input').select(function(){
+        $('div').text('텍스트가 선택되었습니다.').show().fadeOut(2000);
+    });
+    $('button').on('click',function(){
+        $('input').trigger('select');
+    });
+    $('p').one('click dblclick',function(){
+        $(this).animate({fontSize:"+=20px"});
+    });
+})
+</script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jquery</title>
-    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../0320/js/jquery-3.6.4.js"></script>
     <style>
         input,button{display: block;}
         div{border:1px solid black;}
@@ -25,7 +25,7 @@
                         <div><input type="password" value="password"></div>
                         <div><input type="file"></div>
                         <div><input type="image"></div>
-                        <div><input type="reset"></div>
+                        <div><input type="reset" id="reset"></div>
                         <div><input type="submit"></div>
                         <div><input type="hidden" disabled></div>
                         <div>
@@ -58,7 +58,7 @@
     </table>
     <script>
         $(function(){
-            $('button').mouseleave(()=>{
+            $('#reset').click(()=>{
                 $('*').removeClass('pick');
             });
             $('#btn1').click(function(){
@@ -109,7 +109,3 @@
     </script>
 </body>
 </html>
-
-
-
-

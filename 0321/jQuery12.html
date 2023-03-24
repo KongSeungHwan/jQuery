@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <title>jquery</title>
+    <script src="../0320/js/jquery-3.6.4.js"></script>
 </head>
 <body>
     <ul class="vac">
@@ -15,21 +15,20 @@
         <button id="btn3">가격 알아보기(before)</button>
         <button id="btn4">가격 알아보기(after)</button>
     </ul>
-    <script>
-        $(function(){
-            let price= $('<p>40만원</p>');
-            $('#btn1').click(()=>$('.vac').append(price));
-            $('#btn2').click(()=>$('.vac').prepend(price));
-            $('#btn3').click(()=>$('.vac').before(price));
-            $('#btn4').click(()=>$('.vac').after(price));
-            $('#btn1').insertBefore($('#btn4'));
-            $('#btn1').insertAfter($('#btn4'));
-            /* $('button').wrap('<div></div>'); *//* 태그 감싸기 */
-            $('button').wrapAll('<div></div>');
-            $('button').wrapInner('<b>얼마</b>');/* 덮어 쓰기 x prepend 효과 */
-            $('button').unwrap();
-            
-        })
-    </script>
+<script>
+$(function(){
+    let price=$('<p>40만원</p>');
+    $('#btn1').click(()=>$('.vac').append(price));
+    $('#btn2').click(()=>$('.vac').prepend(price));
+    $('#btn3').click(()=>$('.vac').before(price));
+    $('#btn4').click(()=>$('.vac').after(price));
+    $('#btn1').insertBefore($('#btn4'));
+    $('#btn1').insertAfter($('#btn2'));
+    //$('button').wrap('<div></div>');
+    $('button').wrapAll('<div></div>');
+    $('button').wrapInner('<strong> 얼마</strong>');
+    $('button').unwrap();
+})
+</script>
 </body>
 </html>
